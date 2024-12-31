@@ -11,13 +11,10 @@ class Xtrkcad < Formula
   depends_on "gtk+"
   depends_on "libzip"
 
-
   patch do
     url "https://yurix.ch/wpref.diff"
     sha256 "6dc10564abc7ca69863f58ca22cf6823b4328c8754a41cd0ebd88af7252674c6"
   end
-
-
 
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
