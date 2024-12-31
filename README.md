@@ -1,18 +1,21 @@
-# Yurix Xtrackcad
+# Homebrew Xtrkcad Tap
 
-## How do I install these formulae?
+A tap for [xtrkcad](https://sourceforge.net/projects/xtrkcad-fork/), a model railway CAD program.
 
-`brew install yurix/xtrackcad/<formula>`
+Also includes some dependencies.
 
-Or `brew tap yurix/xtrackcad` and then `brew install <formula>`.
+## How do I install it?
 
-Or, in a [`brew bundle`](https://github.com/Homebrew/homebrew-bundle) `Brewfile`:
+Homebrew has some limitations in regard to what dependencies are allowed (a formula can't depend on a cask),
+but xtrkcad want these dependencies. Therefore, you need to manually install inkscape before attempting to install
+xtrkcad.
 
-```ruby
-tap "yurix/xtrackcad"
-brew "<formula>"
+```bash
+brew install inkscape
+brew install recursivetree/xtrkcad/xtrkcad
 ```
 
-## Documentation
-
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+## How to run it
+```bash
+xtrkcad
+```
